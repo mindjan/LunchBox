@@ -1,6 +1,8 @@
 ﻿using System;
-using LunchBox.BE.Models.Restourant;
+using AutoMapper;
+using LunchBox.BE.Contracts.Restourant;
 using LunchBox.BE.Services;
+using LunchBox.BE.Services.Restourants;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LunchBox.BE.Controllers
@@ -9,35 +11,30 @@ namespace LunchBox.BE.Controllers
     public class RestourantController
     {
         private readonly IRestourantService _restourantService;
+        private readonly IMapper _mapper;
 
-        public RestourantController(IRestourantService restourantService)
+        public RestourantController(IRestourantService restourantService, IMapper mapper)
         {
-            this._restourantService = restourantService;
+            _restourantService = restourantService;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public string Post([FromBody]Restourant restourant)
+        public void Post([FromBody]Restourant restourantContract)
         {
+            var restourant = _mapper.Map<Models.Restourant.Restourant>(restourantContract);
+
             _restourantService.Insert(restourant);
-            return "OK";
         }
 
         [HttpGet]
         public Restourant Get(Guid id)
         {
-            return _restourantService.Get(id);
-        }
+            var restourant = _restourantService.Get(id);
 
-        [HttpPut]
-        public Restourant Get2()
-        {
-            return new Restourant();
-        }
+            var result = _mapper.Map<Restourant>(restourant);
 
-        //        [HttpGet]
-        //        public List<Restourant> GetAll()
-        //        {
-        //            return restourantService.GetAll().ToList();
-        //        }
+            return result;
+        }
     }
 }

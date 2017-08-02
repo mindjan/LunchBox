@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using LunchBox.BE.Models.Restourant;
 
-namespace LunchBox.BE.Services
+namespace LunchBox.BE.Services.Restourants
 {
     public interface IRestourantService
     {

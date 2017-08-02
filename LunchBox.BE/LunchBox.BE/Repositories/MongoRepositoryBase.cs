@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using HandyShop.BE.Models;
+using LunchBox.BE.Models;
 using MongoDB.Driver;
 
-namespace HandyShop.BE.Repositories
+namespace LunchBox.BE.Repositories
 {
     public class MongoRepositoryBase<T> where T : MongoModelBase
     {

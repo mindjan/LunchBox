@@ -6,3 +6,11 @@ C:\Users\Mindaugas\Documents\GitHub\lunch-box\LunchBox.BE\LunchBox.BE\bin\Debug\
 C:\Users\Mindaugas\Documents\GitHub\lunch-box\LunchBox.BE\LunchBox.BE\bin\Debug\netcoreapp1.1\LunchBox.BE.pdb
 C:\Users\Mindaugas\Documents\GitHub\lunch-box\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.dll
 C:\Users\Mindaugas\Documents\GitHub\lunch-box\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.pdb
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\bin\Debug\netcoreapp1.1\LunchBox.BE.deps.json
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\bin\Debug\netcoreapp1.1\LunchBox.BE.runtimeconfig.json
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\bin\Debug\netcoreapp1.1\LunchBox.BE.runtimeconfig.dev.json
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\bin\Debug\netcoreapp1.1\LunchBox.BE.dll
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\bin\Debug\netcoreapp1.1\LunchBox.BE.pdb
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.AssemblyInfo.cs
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.dll
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.pdb

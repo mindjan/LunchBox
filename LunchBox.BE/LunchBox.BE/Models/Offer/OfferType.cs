@@ -2,8 +2,8 @@
 {
     public enum OfferType
     {
-        DINNER = 1,
-        SUPPER = 2,
-        BREAKFAST = 3
+        Dinner = 1,
+        Supper = 2,
+        Breakfast = 3
     }
 }

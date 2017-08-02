@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LunchBox.BE.Models.Offer
+namespace LunchBox.BE.Contracts.Offer
 {
-    public class Offer : MongoModelBase
+    public class Offer
     {
         public string Name { get; set; }
         public Guid RestourantId { get; set; }

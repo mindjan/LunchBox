@@ -1,4 +1,4 @@
-﻿namespace LunchBox.BE.Models.Restourant
+﻿namespace LunchBox.BE.Contracts.Restourant
 {
     public class Address
     {

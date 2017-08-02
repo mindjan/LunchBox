@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using LunchBox.BE.Models.Restourant;
-using LunchBox.BE.Repositories;
+using LunchBox.BE.Repositories.Restourant;
 
-namespace LunchBox.BE.Services
+namespace LunchBox.BE.Services.Restourants
 {
     public class RestourantService : IRestourantService
     {
@@ -36,7 +36,7 @@ namespace LunchBox.BE.Services
 
         public IList<Restourant> GetInRadius(double lat, double lon, double radius)
         {
-            throw new NotImplementedException();
+            return _restourantRepository.GetInRadius(lat, lon, radius);
         }
     }
 }
