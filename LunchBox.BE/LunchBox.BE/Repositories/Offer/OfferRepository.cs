@@ -18,17 +18,17 @@ namespace LunchBox.BE.Repositories.Offer
             return offer;
         }
 
-        public Models.Offer.Offer Get(Guid id)
+        public Models.Offer.Offer Get(string id)
         {
             var builder = Builders<Models.Offer.Offer>.Filter;
-            var filter = builder.Eq("Id", id);
+            var filter = builder.Eq("_id", id);
 
             var offer = base.GetOne(filter);
 
             return offer;
         }
 
-        public IEnumerable<Models.Offer.Offer> GetAllRestourantOffers(Guid restourantId)
+        public IEnumerable<Models.Offer.Offer> GetAllRestourantOffers(string restourantId)
         {
             var builder = Builders<Models.Offer.Offer>.Filter;
             var filter = builder.Eq("RestourantId", restourantId);

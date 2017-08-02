@@ -19,7 +19,7 @@ namespace LunchBox.BE.Services.Restourants
             _restourantRepository.Insert(restourant);
         }
 
-        public Restourant Get(Guid id)
+        public Restourant Get(string id)
         {
             return _restourantRepository.Get(id);
         }

@@ -27,7 +27,7 @@ namespace LunchBox.BE.Controllers
         }
 
         [HttpGet]
-        public Offer Get(Guid id)
+        public Offer Get(string id)
         {
             var offer = _offersService.Get(id);
 

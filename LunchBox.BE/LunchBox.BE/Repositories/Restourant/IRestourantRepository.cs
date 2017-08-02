@@ -6,7 +6,7 @@ namespace LunchBox.BE.Repositories.Restourant
     public interface IRestourantRepository
     {
         void Insert(Models.Restourant.Restourant restourant);
-        Models.Restourant.Restourant Get(Guid id);
+        Models.Restourant.Restourant Get(string id);
         void Delete(Guid id);
         IList<Models.Restourant.Restourant> GetAll();
         IList<Models.Restourant.Restourant> GetInRadius(double lat, double lon, double radius);

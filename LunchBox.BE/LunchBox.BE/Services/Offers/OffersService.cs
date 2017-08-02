@@ -14,12 +14,12 @@ namespace LunchBox.BE.Services.Offers
             _offerRepository = offerRepository;
         }
 
-        public Offer Get(Guid offerId)
+        public Offer Get(string offerId)
         {
             return _offerRepository.Get(offerId);
         }
 
-        public IEnumerable<Offer> GetByRestourantId(Guid id)
+        public IEnumerable<Offer> GetByRestourantId(string id)
         {
             return _offerRepository.GetAllRestourantOffers(id);
         }

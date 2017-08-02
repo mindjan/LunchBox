@@ -7,7 +7,7 @@ namespace LunchBox.BE.Services.Restourants
     public interface IRestourantService
     {
         void Insert(Restourant restourant);
-        Restourant Get(Guid id);
+        Restourant Get(string id);
         void Delete(Guid id);
         IList<Restourant> GetAll();
         IList<Restourant> GetInRadius(double lat, double lon, double radius);

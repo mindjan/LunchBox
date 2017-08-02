@@ -16,10 +16,10 @@ namespace LunchBox.BE.Repositories.Restourant
             base.Insert(restourant);
         }
 
-        public Models.Restourant.Restourant Get(Guid id)
+        public Models.Restourant.Restourant Get(string id)
         {
             var builder = Builders<Models.Restourant.Restourant>.Filter;
-            var filter = builder.Eq("Id", id);
+            var filter = builder.Eq("_id", id);
 
             var restourant = base.GetOne(filter);
 

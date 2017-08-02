@@ -28,7 +28,7 @@ namespace LunchBox.BE.Controllers
         }
 
         [HttpGet]
-        public Restourant Get(Guid id)
+        public Restourant Get(string id)
         {
             var restourant = _restourantService.Get(id);
 

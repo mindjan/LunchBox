@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using LunchBox.BE.Models;
 using MongoDB.Driver;
@@ -29,6 +30,7 @@ namespace LunchBox.BE.Repositories
     {
         try
         {
+            entity.Id = Guid.NewGuid().ToString();
             Collection.InsertOne(entity);
         }
         catch (MongoWriteException ex)
