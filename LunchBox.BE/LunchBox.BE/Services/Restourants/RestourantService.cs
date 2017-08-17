@@ -14,9 +14,9 @@ namespace LunchBox.BE.Services.Restourants
             this._restourantRepository = restourantRepository;
         }
 
-        public void Insert(Restourant restourant)
+        public Restourant Insert(Restourant restourant)
         {
-            _restourantRepository.Insert(restourant);
+            return _restourantRepository.Insert(restourant);
         }
 
         public Restourant Get(string id)

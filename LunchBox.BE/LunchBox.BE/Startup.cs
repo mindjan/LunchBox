@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using LunchBox.BE.Contracts.Deal;
+﻿using LunchBox.BE.Contracts.Deal;
 using LunchBox.BE.Contracts.Offer;
 using LunchBox.BE.Contracts.Restourant;
-using LunchBox.BE.Repositories;
 using LunchBox.BE.Repositories.Offer;
 using LunchBox.BE.Repositories.Restourant;
 using LunchBox.BE.Services;

@@ -18,11 +18,15 @@ namespace LunchBox.BE.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody]Offer offerContract)
+        public Offer Post([FromBody]Offer offerContract)
         {
             var offer = _mapper.Map<Models.Offer.Offer>(offerContract);
 
-            _offersService.Insert(offer);
+            var insertedOffer = _offersService.Insert(offer);
+
+            var result = _mapper.Map<Offer>(insertedOffer);
+
+            return result;
         }
 
         [HttpGet]

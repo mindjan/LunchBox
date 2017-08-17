@@ -11,9 +11,11 @@ namespace LunchBox.BE.Repositories.Restourant
 
         }
 
-        public void Insert(Models.Restourant.Restourant restourant)
+        public Models.Restourant.Restourant Insert(Models.Restourant.Restourant restourant)
         {
             base.Insert(restourant);
+
+            return Get(restourant.Id);
         }
 
         public Models.Restourant.Restourant Get(string id)
