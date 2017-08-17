@@ -6,6 +6,7 @@ namespace LunchBox.BE.Models.Offer
     public class Offer : MongoModelBase
     {
         public string Name { get; set; }
+        public string Description { get; set; }
         public string RestourantId { get; set; }
         public decimal Price { get; set; }
         public DateTime ValidFrom { get; set; }

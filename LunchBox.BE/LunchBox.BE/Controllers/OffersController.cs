@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using LunchBox.BE.Contracts.Offer;
 using LunchBox.BE.Services.Offers;
 using Microsoft.AspNetCore.Mvc;

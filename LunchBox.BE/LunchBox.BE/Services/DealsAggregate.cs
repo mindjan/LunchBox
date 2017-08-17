@@ -24,7 +24,7 @@ namespace LunchBox.BE.Services
 
             foreach (var restourant in restourants)
             {
-                var restourantOffers = _offersService.GetByRestourantId(restourant.Id.ToString());
+                var restourantOffers = _offersService.GetByRestourantId(restourant.Id);
 
                 var deal = new Deal
                 {

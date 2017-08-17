@@ -14,3 +14,4 @@ C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\bin\Debug\netcoreapp1.1\Lu
 C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.AssemblyInfo.cs
 C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.dll
 C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.pdb
+C:\Projects\LunchBox\LunchBox\LunchBox.BE\LunchBox.BE\obj\Debug\netcoreapp1.1\LunchBox.BE.csprojResolveAssemblyReference.cache
