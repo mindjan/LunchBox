@@ -9,6 +9,7 @@ using LunchBox.BE.Repositories;
 using LunchBox.BE.Repositories.Offer;
 using LunchBox.BE.Repositories.Restourant;
 using LunchBox.BE.Services;
+using LunchBox.BE.Services.Ideintity;
 using LunchBox.BE.Services.Offers;
 using LunchBox.BE.Services.Restourants;
 using Microsoft.AspNetCore.Builder;
@@ -45,6 +46,7 @@ namespace LunchBox.BE
             services.AddTransient<IOfferRepository>(provider => new OfferRepository("mongodb://localhost/LunchBox", "Offers"));
             services.AddScoped<IRestourantService, RestourantService>();
             services.AddScoped<IOffersService, OffersService>();
+            services.AddScoped<IFacebookIdentityService, FacebookIdentityService>();
             services.AddScoped<IDealsAggregate, DealsAggregate>();
 
             services.AddLogging();

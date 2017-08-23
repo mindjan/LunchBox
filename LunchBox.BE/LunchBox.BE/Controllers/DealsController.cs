@@ -2,6 +2,7 @@
 using AutoMapper;
 using LunchBox.BE.Contracts.Deal;
 using LunchBox.BE.Services;
+using LunchBox.BE.Services.Ideintity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LunchBox.BE.Controllers
