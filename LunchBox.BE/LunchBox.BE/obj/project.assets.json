@@ -10098,10 +10098,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\LunchBox\\LunchBox.BE\\LunchBox.BE\\LunchBox.BE.csproj",
+      "projectUniqueName": "C:\\Projects\\LunchBox\\LunchBox\\LunchBox.BE\\LunchBox.BE\\LunchBox.BE.csproj",
       "projectName": "LunchBox.BE",
-      "projectPath": "C:\\Projects\\LunchBox\\LunchBox.BE\\LunchBox.BE\\LunchBox.BE.csproj",
-      "outputPath": "C:\\Projects\\LunchBox\\LunchBox.BE\\LunchBox.BE\\obj\\",
+      "projectPath": "C:\\Projects\\LunchBox\\LunchBox\\LunchBox.BE\\LunchBox.BE\\LunchBox.BE.csproj",
+      "outputPath": "C:\\Projects\\LunchBox\\LunchBox\\LunchBox.BE\\LunchBox.BE\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

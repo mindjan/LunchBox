@@ -1,8 +1,4 @@
 ﻿using AutoMapper;
-<<<<<<< HEAD
-using LunchBox.BE.Contracts.Identity;
-=======
->>>>>>> e7ece01ec29677c991aa62826dd13b67938b1187
 using LunchBox.BE.Contracts.Restourant;
 using LunchBox.BE.Services.Restourants;
 using Microsoft.AspNetCore.Mvc;
@@ -22,11 +18,7 @@ namespace LunchBox.BE.Controllers
         }
 
         [HttpPost]
-<<<<<<< HEAD
-        public void Post([FromBody]Restourant restourantContract, string accessToken)
-=======
-        public Restourant Post([FromBody]Restourant restourantContract)
->>>>>>> e7ece01ec29677c991aa62826dd13b67938b1187
+        public Restourant Post([FromBody]Restourant restourantContract, string accessToken)
         {
             var restourant = _mapper.Map<Models.Restourant.Restourant>(restourantContract);
 
