@@ -6,7 +6,7 @@ namespace LunchBox.BE.Services.Restourants
 {
     public interface IRestourantService
     {
-        void Insert(Restourant restourant);
+        Restourant Insert(Restourant restourant);
         Restourant Get(string id);
         void Delete(Guid id);
         IList<Restourant> GetAll();

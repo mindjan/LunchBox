@@ -21,7 +21,11 @@ namespace LunchBox.BE.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public void Post([FromBody]Offer offerContract, string accessToken)
+=======
+        public Offer Post([FromBody]Offer offerContract)
+>>>>>>> e7ece01ec29677c991aa62826dd13b67938b1187
         {
             var userInfo = _facebookIdentityService.VerifyFacebookAccessToken(accessToken).Result;
 
@@ -32,7 +36,11 @@ namespace LunchBox.BE.Controllers
 
             var offer = _mapper.Map<Models.Offer.Offer>(offerContract);
 
-            _offersService.Insert(offer);
+            var insertedOffer = _offersService.Insert(offer);
+
+            var result = _mapper.Map<Offer>(insertedOffer);
+
+            return result;
         }
 
         [HttpGet]

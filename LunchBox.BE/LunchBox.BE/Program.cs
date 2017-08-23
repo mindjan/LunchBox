@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
 namespace LunchBox.BE
@@ -13,9 +14,11 @@ namespace LunchBox.BE
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
+                .UseUrls("http://localhost:5001/")
                 .Build();
 
-            host.Run();
+
+                host.Run();
         }
     }
 }

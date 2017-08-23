@@ -5,6 +5,7 @@ namespace LunchBox.BE.Contracts.Offer
 {
     public class Offer
     {
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public Guid RestourantId { get; set; }

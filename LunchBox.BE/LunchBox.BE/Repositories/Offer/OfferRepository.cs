@@ -15,7 +15,7 @@ namespace LunchBox.BE.Repositories.Offer
         {
             base.Insert(offer);
 
-            return offer;
+            return Get(offer.Id);
         }
 
         public Models.Offer.Offer Get(string id)
