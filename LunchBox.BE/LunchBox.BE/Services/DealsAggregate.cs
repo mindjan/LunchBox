@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using LunchBox.BE.Models.Deal;
 using LunchBox.BE.Services.Offers;
 using LunchBox.BE.Services.Restourants;
@@ -25,11 +27,12 @@ namespace LunchBox.BE.Services
             foreach (var restourant in restourants)
             {
                 var restourantOffers = _offersService.GetByRestourantId(restourant.Id);
+                var validOffers = restourantOffers.Where(x => x.ValidFrom > DateTime.Now && x.ValidTo < DateTime.Now);
 
                 var deal = new Deal
                 {
                     Restourant = restourant,
-                    Offers = restourantOffers
+                    Offers = validOffers
                 };
 
                 deals.Add(deal);

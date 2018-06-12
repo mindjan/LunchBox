@@ -23,13 +23,6 @@ namespace LunchBox.BE.Controllers
         [HttpPost]
         public Offer Post([FromBody]Offer offerContract, string accessToken)
         {
-            var userInfo = _facebookIdentityService.VerifyFacebookAccessToken(accessToken).Result;
-
-            if (string.IsNullOrEmpty(userInfo.ID))
-            {
-                return null;
-            }
-
             var offer = _mapper.Map<Models.Offer.Offer>(offerContract);
 
             var insertedOffer = _offersService.Insert(offer);
