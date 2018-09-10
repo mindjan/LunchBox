@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using AutoMapper;
-using LunchBox.BE.Contracts.Deal;
-using LunchBox.BE.Services;
-using LunchBox.BE.Services.Ideintity;
+using System.Linq;
+using LunchBox.BE.Repositories.Deal;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LunchBox.BE.Controllers
@@ -10,23 +8,28 @@ namespace LunchBox.BE.Controllers
     [Route("api/[controller]")]
     public class DealsController
     {
-        private readonly IMapper _mapper;
-        private readonly IDealsAggregate _dealsAggregate;
+        private readonly IDealRepository _dealRepository;
 
-        public DealsController(IMapper mapper, IDealsAggregate dealsAggregate)
+        public DealsController(IDealRepository dealRepository)
         {
-            _mapper = mapper;
-            _dealsAggregate = dealsAggregate;
+            _dealRepository = dealRepository;
         }
+//
+//        [HttpGet]
+//        public List<Models.Deal.Deal> GetAll()
+//        {
+//            var deals = _dealRepository.GetAllDeals();
+//
+//
+//            return deals.ToList();
+//        }
 
         [HttpGet]
-        public List<Deal> Get(double lat, double lon, double radius)
+        public List<Models.Deal.Deal> GetAllNearby(double lat, double lon, double radius)
         {
-            var deals = _dealsAggregate.GetDeals(lat, lon, radius);
+            var deals = _dealRepository.GetAllDeals(lon, lat, radius);
 
-            var result = _mapper.Map<List<Deal>>(deals);
-
-            return result;
+            return deals.ToList();
         }
 
     }

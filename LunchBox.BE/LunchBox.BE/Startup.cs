@@ -1,19 +1,10 @@
-﻿using LunchBox.BE.Contracts.Deal;
-using LunchBox.BE.Contracts.Offer;
-using LunchBox.BE.Contracts.Restourant;
-using LunchBox.BE.Repositories.Offer;
-using LunchBox.BE.Repositories.Restourant;
-using LunchBox.BE.Services;
-using LunchBox.BE.Services.Ideintity;
-using LunchBox.BE.Services.Offers;
-using LunchBox.BE.Services.Restourants;
+﻿using LunchBox.BE.Repositories.Deal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
-using DayOfWeek = LunchBox.BE.Contracts.Restourant.DayOfWeek;
 
 namespace LunchBox.BE
 {
@@ -37,12 +28,8 @@ namespace LunchBox.BE
             // Add framework services.
             services.AddMvc();
 
-            services.AddTransient<IRestourantRepository>(provider => new RestourantRepository("mongodb://localhost/LunchBox", "Restourants"));
-            services.AddTransient<IOfferRepository>(provider => new OfferRepository("mongodb://localhost/LunchBox", "Offers"));
-            services.AddScoped<IRestourantService, RestourantService>();
-            services.AddScoped<IOffersService, OffersService>();
-            services.AddScoped<IFacebookIdentityService, FacebookIdentityService>();
-            services.AddScoped<IDealsAggregate, DealsAggregate>();
+            services.AddTransient<IDealRepository>(provider => new DealRepository("mongodb://localhost/LunchBox", "LunchDeals"));
+
 
             services.AddLogging();
 
@@ -57,20 +44,20 @@ namespace LunchBox.BE
 
             var config = new AutoMapper.MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Deal, Models.Deal.Deal>();
-                cfg.CreateMap<Models.Deal.Deal, Deal > ();
-                cfg.CreateMap<Offer, Models.Offer.Offer>();
-                cfg.CreateMap<Models.Offer.Offer, Offer> ();
-                cfg.CreateMap<Restourant, Models.Restourant.Restourant>();
-                cfg.CreateMap<Models.Restourant.Restourant, Restourant>();
-                cfg.CreateMap<Address, Models.Restourant.Address>();
-                cfg.CreateMap<Models.Restourant.Address, Address > ();
-                cfg.CreateMap<DayOfWeek, Models.Restourant.DayOfWeek>();
-                cfg.CreateMap<Models.Restourant.DayOfWeek, DayOfWeek>();
-                cfg.CreateMap<Location, Models.Restourant.Location>();
-                cfg.CreateMap<Models.Restourant.Location, Location>();
-                cfg.CreateMap<WorkingHours, Models.Restourant.WorkingHours>();
-                cfg.CreateMap<Models.Restourant.WorkingHours, WorkingHours> ();
+//                cfg.CreateMap<Deal, Models.Deal.Deal>();
+//                cfg.CreateMap<Models.Deal.Deal, Deal > ();
+//                cfg.CreateMap<Offer, Models.Offer.Offer>();
+//                cfg.CreateMap<Models.Offer.Offer, Offer> ();
+//                cfg.CreateMap<Restaurant, Models.Restaurant.Restaurant>();
+//                cfg.CreateMap<Models.Restaurant.Restaurant, Restaurant>();
+//                cfg.CreateMap<Address, Models.Restaurant.Address>();
+//                cfg.CreateMap<Models.Restaurant.Address, Address > ();
+//                cfg.CreateMap<DayOfWeek, Models.Restaurant.DayOfWeek>();
+//                cfg.CreateMap<Models.Restaurant.DayOfWeek, DayOfWeek>();
+//                cfg.CreateMap<Location, Models.Restaurant.Location>();
+//                cfg.CreateMap<Models.Restaurant.Location, Location>();
+//                cfg.CreateMap<WorkingHours, Models.Restaurant.WorkingHours>();
+//                cfg.CreateMap<Models.Restaurant.WorkingHours, WorkingHours> ();
             });
 
             var mapper = config.CreateMapper();
