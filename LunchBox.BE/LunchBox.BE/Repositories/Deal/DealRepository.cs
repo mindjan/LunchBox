@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.GeoJsonObjectModel;
 
@@ -9,6 +8,8 @@ namespace LunchBox.BE.Repositories.Deal
     {
         public DealRepository(string connectionString, string collectionName) : base(connectionString, collectionName)
         {
+            var index = Builders<Models.Deal.Deal>.IndexKeys.Geo2DSphere("Restaurant.location.PointLocation");
+            Collection.Indexes.CreateOne(index);
         }
 
         public IEnumerable<Models.Deal.Deal> GetAllDeals()
@@ -31,7 +32,7 @@ namespace LunchBox.BE.Repositories.Deal
 //                         & builder.Lte("Restaurant.location.longitude", lon + radius);
 
             var gp =new GeoJsonPoint<GeoJson2DGeographicCoordinates>(new GeoJson2DGeographicCoordinates(lon, lat));
-            var query=Builders<Models.Deal.Deal>.Filter.Near("Restaurant.location",gp,radius);
+            var query=Builders<Models.Deal.Deal>.Filter.Near("Restaurant.location.PointLocation", gp,radius);
             //var result = await col.Find(query).ToListAsync();
 
             var products = base.GetMany(query);

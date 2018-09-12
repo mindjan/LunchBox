@@ -14,15 +14,15 @@ namespace LunchBox.BE.Controllers
         {
             _dealRepository = dealRepository;
         }
-//
-//        [HttpGet]
-//        public List<Models.Deal.Deal> GetAll()
-//        {
-//            var deals = _dealRepository.GetAllDeals();
-//
-//
-//            return deals.ToList();
-//        }
+
+        [HttpGet("GetAll1")]
+        public List<Models.Deal.Deal> GetAll()
+        {
+            var deals = _dealRepository.GetAllDeals();
+
+
+            return deals.ToList();
+        }
 
         [HttpGet]
         public List<Models.Deal.Deal> GetAllNearby(double lat, double lon, double radius)

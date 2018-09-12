@@ -20,6 +20,8 @@ namespace LunchBox.BE.Repositories
         _collectionName = collectionName;
         //_logger = LogManager.GetLogger(nameof(T), "MongoDb");
         Collection = database.GetCollection<T>(_collectionName);
+
+       
     }
 
     public virtual void EnsureIndexes()
